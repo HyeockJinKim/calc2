@@ -11,8 +11,22 @@ import java.util.Map;
 
 program
 :
+    stmts
+;
+
+stmts
+:
+    stmt ';'
+|
+    stmt ';' stmts
+;
+
+stmt
+:
   aexpr
   { int result = $aexpr.sv; System.out.println(result); }
+  | IDENT '=' aexpr
+  { String id = $IDENT.getText(); map.put(id, $aexpr.sv); }
 ;
 
 aexpr returns [int sv]

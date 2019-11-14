@@ -22,6 +22,26 @@ public interface WHILEListener extends ParseTreeListener {
 	 */
 	void exitProgram(WHILEParser.ProgramContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link WHILEParser#stmts}.
+	 * @param ctx the parse tree
+	 */
+	void enterStmts(WHILEParser.StmtsContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link WHILEParser#stmts}.
+	 * @param ctx the parse tree
+	 */
+	void exitStmts(WHILEParser.StmtsContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link WHILEParser#stmt}.
+	 * @param ctx the parse tree
+	 */
+	void enterStmt(WHILEParser.StmtContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link WHILEParser#stmt}.
+	 * @param ctx the parse tree
+	 */
+	void exitStmt(WHILEParser.StmtContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link WHILEParser#aexpr}.
 	 * @param ctx the parse tree
 	 */
