@@ -16,6 +16,8 @@ program
 
 stmts
 :
+    stmt
+|
     stmt ';'
 |
     stmt ';' stmts

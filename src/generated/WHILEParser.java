@@ -150,7 +150,7 @@ public class WHILEParser extends Parser {
 		StmtsContext _localctx = new StmtsContext(_ctx, getState());
 		enterRule(_localctx, 2, RULE_stmts);
 		try {
-			setState(19);
+			setState(20);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,0,_ctx) ) {
 			case 1:
@@ -158,18 +158,25 @@ public class WHILEParser extends Parser {
 				{
 				setState(12);
 				stmt();
-				setState(13);
-				match(T__0);
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(15);
+				setState(13);
 				stmt();
-				setState(16);
+				setState(14);
 				match(T__0);
+				}
+				break;
+			case 3:
+				enterOuterAlt(_localctx, 3);
+				{
+				setState(16);
+				stmt();
 				setState(17);
+				match(T__0);
+				setState(18);
 				stmts();
 				}
 				break;
@@ -211,13 +218,13 @@ public class WHILEParser extends Parser {
 		StmtContext _localctx = new StmtContext(_ctx, getState());
 		enterRule(_localctx, 4, RULE_stmt);
 		try {
-			setState(29);
+			setState(30);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,1,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(21);
+				setState(22);
 				((StmtContext)_localctx).aexpr = aexpr(0);
 				 int result = ((StmtContext)_localctx).aexpr.sv; System.out.println(result); 
 				}
@@ -225,11 +232,11 @@ public class WHILEParser extends Parser {
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(24);
-				((StmtContext)_localctx).IDENT = match(IDENT);
 				setState(25);
-				match(T__1);
+				((StmtContext)_localctx).IDENT = match(IDENT);
 				setState(26);
+				match(T__1);
+				setState(27);
 				((StmtContext)_localctx).aexpr = aexpr(0);
 				 String id = ((StmtContext)_localctx).IDENT.getText(); map.put(id, ((StmtContext)_localctx).aexpr.sv); 
 				}
@@ -291,12 +298,12 @@ public class WHILEParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			{
-			setState(32);
+			setState(33);
 			((AexprContext)_localctx).aexpr2 = aexpr2(0);
 			 ((AexprContext)_localctx).sv =  ((AexprContext)_localctx).aexpr2.sv; 
 			}
 			_ctx.stop = _input.LT(-1);
-			setState(47);
+			setState(48);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,3,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
@@ -304,7 +311,7 @@ public class WHILEParser extends Parser {
 					if ( _parseListeners!=null ) triggerExitRuleEvent();
 					_prevctx = _localctx;
 					{
-					setState(45);
+					setState(46);
 					_errHandler.sync(this);
 					switch ( getInterpreter().adaptivePredict(_input,2,_ctx) ) {
 					case 1:
@@ -313,11 +320,11 @@ public class WHILEParser extends Parser {
 						_localctx.a1 = _prevctx;
 						_localctx.a1 = _prevctx;
 						pushNewRecursionContext(_localctx, _startState, RULE_aexpr);
-						setState(35);
-						if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
 						setState(36);
-						match(T__2);
+						if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
 						setState(37);
+						match(T__2);
+						setState(38);
 						((AexprContext)_localctx).a2 = aexpr(3);
 						 ((AexprContext)_localctx).sv =  ((AexprContext)_localctx).a1.sv + ((AexprContext)_localctx).a2.sv; 
 						}
@@ -328,11 +335,11 @@ public class WHILEParser extends Parser {
 						_localctx.a1 = _prevctx;
 						_localctx.a1 = _prevctx;
 						pushNewRecursionContext(_localctx, _startState, RULE_aexpr);
-						setState(40);
-						if (!(precpred(_ctx, 1))) throw new FailedPredicateException(this, "precpred(_ctx, 1)");
 						setState(41);
-						match(T__3);
+						if (!(precpred(_ctx, 1))) throw new FailedPredicateException(this, "precpred(_ctx, 1)");
 						setState(42);
+						match(T__3);
+						setState(43);
 						((AexprContext)_localctx).a2 = aexpr(2);
 						 ((AexprContext)_localctx).sv =  ((AexprContext)_localctx).a1.sv - ((AexprContext)_localctx).a2.sv; 
 						}
@@ -340,7 +347,7 @@ public class WHILEParser extends Parser {
 					}
 					} 
 				}
-				setState(49);
+				setState(50);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,3,_ctx);
 			}
@@ -400,19 +407,19 @@ public class WHILEParser extends Parser {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(55);
+			setState(56);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case N:
 				{
-				setState(51);
+				setState(52);
 				((Aexpr2Context)_localctx).N = match(N);
 				 String n = ((Aexpr2Context)_localctx).N.getText(); ((Aexpr2Context)_localctx).sv =  Integer.parseInt(n); 
 				}
 				break;
 			case IDENT:
 				{
-				setState(53);
+				setState(54);
 				((Aexpr2Context)_localctx).IDENT = match(IDENT);
 				 String id = ((Aexpr2Context)_localctx).IDENT.getText(); ((Aexpr2Context)_localctx).sv =  map.get(id); 
 				}
@@ -421,7 +428,7 @@ public class WHILEParser extends Parser {
 				throw new NoViableAltException(this);
 			}
 			_ctx.stop = _input.LT(-1);
-			setState(69);
+			setState(70);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,6,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
@@ -429,7 +436,7 @@ public class WHILEParser extends Parser {
 					if ( _parseListeners!=null ) triggerExitRuleEvent();
 					_prevctx = _localctx;
 					{
-					setState(67);
+					setState(68);
 					_errHandler.sync(this);
 					switch ( getInterpreter().adaptivePredict(_input,5,_ctx) ) {
 					case 1:
@@ -438,11 +445,11 @@ public class WHILEParser extends Parser {
 						_localctx.a1 = _prevctx;
 						_localctx.a1 = _prevctx;
 						pushNewRecursionContext(_localctx, _startState, RULE_aexpr2);
-						setState(57);
-						if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
 						setState(58);
-						match(T__4);
+						if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
 						setState(59);
+						match(T__4);
+						setState(60);
 						((Aexpr2Context)_localctx).a2 = aexpr2(3);
 						 ((Aexpr2Context)_localctx).sv =  ((Aexpr2Context)_localctx).a1.sv * ((Aexpr2Context)_localctx).a2.sv; 
 						}
@@ -453,11 +460,11 @@ public class WHILEParser extends Parser {
 						_localctx.a1 = _prevctx;
 						_localctx.a1 = _prevctx;
 						pushNewRecursionContext(_localctx, _startState, RULE_aexpr2);
-						setState(62);
-						if (!(precpred(_ctx, 1))) throw new FailedPredicateException(this, "precpred(_ctx, 1)");
 						setState(63);
-						match(T__5);
+						if (!(precpred(_ctx, 1))) throw new FailedPredicateException(this, "precpred(_ctx, 1)");
 						setState(64);
+						match(T__5);
+						setState(65);
 						((Aexpr2Context)_localctx).a2 = aexpr2(2);
 						 ((Aexpr2Context)_localctx).sv =  ((Aexpr2Context)_localctx).a1.sv / ((Aexpr2Context)_localctx).a2.sv; 
 						}
@@ -465,7 +472,7 @@ public class WHILEParser extends Parser {
 					}
 					} 
 				}
-				setState(71);
+				setState(72);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,6,_ctx);
 			}
@@ -511,25 +518,25 @@ public class WHILEParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\13K\4\2\t\2\4\3\t"+
-		"\3\4\4\t\4\4\5\t\5\4\6\t\6\3\2\3\2\3\3\3\3\3\3\3\3\3\3\3\3\3\3\5\3\26"+
-		"\n\3\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\5\4 \n\4\3\5\3\5\3\5\3\5\3\5\3\5"+
-		"\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\7\5\60\n\5\f\5\16\5\63\13\5\3\6\3\6\3"+
-		"\6\3\6\3\6\5\6:\n\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\7\6F\n\6\f"+
-		"\6\16\6I\13\6\3\6\2\4\b\n\7\2\4\6\b\n\2\2\2L\2\f\3\2\2\2\4\25\3\2\2\2"+
-		"\6\37\3\2\2\2\b!\3\2\2\2\n9\3\2\2\2\f\r\5\4\3\2\r\3\3\2\2\2\16\17\5\6"+
-		"\4\2\17\20\7\3\2\2\20\26\3\2\2\2\21\22\5\6\4\2\22\23\7\3\2\2\23\24\5\4"+
-		"\3\2\24\26\3\2\2\2\25\16\3\2\2\2\25\21\3\2\2\2\26\5\3\2\2\2\27\30\5\b"+
-		"\5\2\30\31\b\4\1\2\31 \3\2\2\2\32\33\7\n\2\2\33\34\7\4\2\2\34\35\5\b\5"+
-		"\2\35\36\b\4\1\2\36 \3\2\2\2\37\27\3\2\2\2\37\32\3\2\2\2 \7\3\2\2\2!\""+
-		"\b\5\1\2\"#\5\n\6\2#$\b\5\1\2$\61\3\2\2\2%&\f\4\2\2&\'\7\5\2\2\'(\5\b"+
-		"\5\5()\b\5\1\2)\60\3\2\2\2*+\f\3\2\2+,\7\6\2\2,-\5\b\5\4-.\b\5\1\2.\60"+
-		"\3\2\2\2/%\3\2\2\2/*\3\2\2\2\60\63\3\2\2\2\61/\3\2\2\2\61\62\3\2\2\2\62"+
-		"\t\3\2\2\2\63\61\3\2\2\2\64\65\b\6\1\2\65\66\7\t\2\2\66:\b\6\1\2\678\7"+
-		"\n\2\28:\b\6\1\29\64\3\2\2\29\67\3\2\2\2:G\3\2\2\2;<\f\4\2\2<=\7\7\2\2"+
-		"=>\5\n\6\5>?\b\6\1\2?F\3\2\2\2@A\f\3\2\2AB\7\b\2\2BC\5\n\6\4CD\b\6\1\2"+
-		"DF\3\2\2\2E;\3\2\2\2E@\3\2\2\2FI\3\2\2\2GE\3\2\2\2GH\3\2\2\2H\13\3\2\2"+
-		"\2IG\3\2\2\2\t\25\37/\619EG";
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\13L\4\2\t\2\4\3\t"+
+		"\3\4\4\t\4\4\5\t\5\4\6\t\6\3\2\3\2\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\5\3"+
+		"\27\n\3\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\5\4!\n\4\3\5\3\5\3\5\3\5\3\5\3"+
+		"\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\7\5\61\n\5\f\5\16\5\64\13\5\3\6\3\6"+
+		"\3\6\3\6\3\6\5\6;\n\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\7\6G\n\6"+
+		"\f\6\16\6J\13\6\3\6\2\4\b\n\7\2\4\6\b\n\2\2\2N\2\f\3\2\2\2\4\26\3\2\2"+
+		"\2\6 \3\2\2\2\b\"\3\2\2\2\n:\3\2\2\2\f\r\5\4\3\2\r\3\3\2\2\2\16\27\5\6"+
+		"\4\2\17\20\5\6\4\2\20\21\7\3\2\2\21\27\3\2\2\2\22\23\5\6\4\2\23\24\7\3"+
+		"\2\2\24\25\5\4\3\2\25\27\3\2\2\2\26\16\3\2\2\2\26\17\3\2\2\2\26\22\3\2"+
+		"\2\2\27\5\3\2\2\2\30\31\5\b\5\2\31\32\b\4\1\2\32!\3\2\2\2\33\34\7\n\2"+
+		"\2\34\35\7\4\2\2\35\36\5\b\5\2\36\37\b\4\1\2\37!\3\2\2\2 \30\3\2\2\2 "+
+		"\33\3\2\2\2!\7\3\2\2\2\"#\b\5\1\2#$\5\n\6\2$%\b\5\1\2%\62\3\2\2\2&\'\f"+
+		"\4\2\2\'(\7\5\2\2()\5\b\5\5)*\b\5\1\2*\61\3\2\2\2+,\f\3\2\2,-\7\6\2\2"+
+		"-.\5\b\5\4./\b\5\1\2/\61\3\2\2\2\60&\3\2\2\2\60+\3\2\2\2\61\64\3\2\2\2"+
+		"\62\60\3\2\2\2\62\63\3\2\2\2\63\t\3\2\2\2\64\62\3\2\2\2\65\66\b\6\1\2"+
+		"\66\67\7\t\2\2\67;\b\6\1\289\7\n\2\29;\b\6\1\2:\65\3\2\2\2:8\3\2\2\2;"+
+		"H\3\2\2\2<=\f\4\2\2=>\7\7\2\2>?\5\n\6\5?@\b\6\1\2@G\3\2\2\2AB\f\3\2\2"+
+		"BC\7\b\2\2CD\5\n\6\4DE\b\6\1\2EG\3\2\2\2F<\3\2\2\2FA\3\2\2\2GJ\3\2\2\2"+
+		"HF\3\2\2\2HI\3\2\2\2I\13\3\2\2\2JH\3\2\2\2\t\26 \60\62:FH";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {
